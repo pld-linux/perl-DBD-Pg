@@ -45,21 +45,22 @@ Perl.
 Dieses Paket enthält eine Implementierung von PostgreSQL für Perl.
 
 %description -l es
-Este paquete contiene una implementación de DBI para PotgreSQL para PERL.
+Este paquete contiene una implementación de DBI para PotgreSQL para
+PERL.
 
 %description -l fr
-Ce paquetage contient une mise en oeuvre de DBI pour PostgreSQL pour Perl.
+Ce paquetage contient une mise en oeuvre de DBI pour PostgreSQL pour
+Perl.
 
 %description -l it
-Questo pacchetto contiene un'implementazione di DBI per
-PostgreSQL per Perl.
+Questo pacchetto contiene un'implementazione di DBI per PostgreSQL per
+Perl.
 
 %description -l ja
 ¤³¤Î¥Ñ¥Ã¥±¡¼¥¸¤Ë¤Ï Perl ¤Î PostgreSQL ÍÑ DBI ¼ÂÁõ¤¬¼ýÏ¿¤µ¤ì¤Æ¤¤¤Þ¤¹¡£
 
 %description -l ko
-ÀÌ ÆÐÅ°Áö´Â ÆÞÀ» À§ÇÑ PostgreSQLÀÇ DBI ½ÇÇöÀ»
-Æ÷ÇÔÇÏ°í ÀÖ½À´Ï´Ù.
+ÀÌ ÆÐÅ°Áö´Â ÆÞÀ» À§ÇÑ PostgreSQLÀÇ DBI ½ÇÇöÀ» Æ÷ÇÔÇÏ°í ÀÖ½À´Ï´Ù.
 
 %description -l no
 Denne pakken inneholder en implementasjon av DBI for PostgreSQL for
