@@ -29,13 +29,13 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	2fc355b28ad5c7c05a46bf74fc88dd38
-BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-DBI
+BuildRequires:	perl-devel >= 5.6
 BuildRequires:	postgresql-devel
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq "perl(POSIX(qw(isprint)))"
+%define		_noautoreq 'perl(POSIX(qw(isprint)))'
 
 %description
 DBD::Pg - PostgreSQL database driver for the DBI module.
@@ -108,7 +108,8 @@ POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
