@@ -11,8 +11,9 @@ Summary(it):	Interfaccia PostgreSQL per Perl
 Summary(ja):	Perl ¤Î PostgreSQL ¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹
 Summary(ko):	ÆŞÀ» À§ÇÑ PostgresSQL ÀÎÅÍÆäÀÌ½º
 Summary(no):	Et PostgreSQL-grensesnitt for Perl
-Summary(pl):	Modu³ perla DBD::Pg
+Summary(pl):	Perlowy interfejs do PostgresSQLa
 Summary(pt):	Uma interface de Perl para o PostgresSQL
+Summary(pt_BR):	Uma interface de Perl para o PostgresSQL
 Summary(ru):	éÎÔÅÒÆÅÊÓ PostgresSQL ÄÌÑ Perl
 Summary(sv):	Ett gränssnitt till PostgresSQL för Perl
 Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ PostgresSQL
@@ -73,12 +74,19 @@ DBD::Pg - Sterownik bazy danych PostgreSQL dla modu³u DBI.
 Este pacote contém uma implementação de DBI para o PostgreSQL para o
 Perl.
 
+%description -l pt_BR
+Este pacote contém uma implementação de DBI para o PostgreSQL para o
+Perl.
+
 %description -l ru
 üÔÏ ĞÁËÅÔ ÓÏÄÅÒÖÉÔ ÒÅÁÌÉÚÁÃÉÀ DBI ÄÌÑ PostgreSQL ÄÌÑ Perl.
 
 %description -l sv
 Detta paket innehåller en implementation av DBI för PostgreSQL för
 Perl.
+
+%description -l zh_CN
+¸ÃÈí¼ş°ü°üÀ¨ÓÃÓÚ Perl µÄ PostgreSQL µÄ DBI ÊµÏÖ¡£
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
