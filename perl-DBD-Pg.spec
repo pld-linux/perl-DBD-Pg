@@ -14,7 +14,7 @@ Summary(fr):	Interface PostgresSQL pour Perl
 Summary(it):	Interfaccia PostgreSQL per Perl
 Summary(ja):	Perl ㅞ PostgreSQL ⅳτ�에샵樂㎘ㄵ�
 Summary(ko):	펄을 위한 PostgresSQL 인터페이스
-Summary(no):	Et PostgreSQL-grensesnitt for Perl
+Summary(nb):	Et PostgreSQL-grensesnitt for Perl
 Summary(pl):	Perlowy interfejs do PostgresSQLa
 Summary(pt):	Uma interface de Perl para o PostgresSQL
 Summary(pt_BR):	Uma interface de Perl para o PostgresSQL
@@ -68,7 +68,7 @@ Perl.
 %description -l ko
 이 패키지는 펄을 위한 PostgreSQL의 DBI 실현을 포함하고 있습니다.
 
-%description -l no
+%description -l nb
 Denne pakken inneholder en implementasjon av DBI for PostgreSQL for
 Perl.
 
