@@ -15,7 +15,7 @@ Summary(it):	Interfaccia PostgreSQL per Perl
 Summary(ja):	Perl §Œ PostgreSQL •§•Û•ø°º•’•ß•§•π
 Summary(ko):	∆ﬁ¿ª ¿ß«— PostgresSQL ¿Œ≈Õ∆‰¿ÃΩ∫
 Summary(nb):	Et PostgreSQL-grensesnitt for Perl
-Summary(pl):	Perlowy interfejs do PostgresSQLa
+Summary(pl):	Perlowy interfejs do PostgresSQL-a
 Summary(pt):	Uma interface de Perl para o PostgresSQL
 Summary(pt_BR):	Uma interface de Perl para o PostgresSQL
 Summary(ru):	ÈŒ‘≈“∆≈ ” PostgresSQL ƒÃ— Perl
