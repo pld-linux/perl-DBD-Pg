@@ -1,12 +1,25 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	Pg
-%define		_noautoreq "perl(POSIX(qw(isprint)))"
-Summary:	DBD::Pg perl module
+Summary:	A PostgresSQL interface for Perl
+Summary(cs):	PostgresSQL rozhraní pro Perl
+Summary(da):	Et PostgreSQL-grænseflade for Perl
+Summary(de):	Ein PostgreSQL-Interface für Perl
+Summary(es):	Interfaz PostgresSQL para Perl
+Summary(fr):	Interface PostgresSQL pour Perl
+Summary(it):	Interfaccia PostgreSQL per Perl
+Summary(ja):	Perl ¤Î PostgreSQL ¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹
+Summary(ko):	ÆŞÀ» À§ÇÑ PostgresSQL ÀÎÅÍÆäÀÌ½º
+Summary(no):	Et PostgreSQL-grensesnitt for Perl
 Summary(pl):	Modu³ perla DBD::Pg
+Summary(pt):	Uma interface de Perl para o PostgresSQL
+Summary(ru):	éÎÔÅÒÆÅÊÓ PostgresSQL ÄÌÑ Perl
+Summary(sv):	Ett gränssnitt till PostgresSQL för Perl
+Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ PostgresSQL
+Summary(zh_CN):	Perl µÄ PostgresSQL ½çÃæ¡£
 Name:		perl-DBD-Pg
 Version:	1.13
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -16,11 +29,55 @@ BuildRequires:	postgresql-libs
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautoreq "perl(POSIX(qw(isprint)))"
+
 %description
 DBD::Pg - PostgreSQL database driver for the DBI module.
 
+%description -l cs
+Implementace DBI pro PostgreSQL do Perlu.
+
+%description -l da
+Denne pakke indeholder en implementation af DBI for PostgreSQL for
+Perl.
+
+%description -l de
+Dieses Paket enthält eine Implementierung von PostgreSQL für Perl.
+
+%description -l es
+Este paquete contiene una implementación de DBI para PotgreSQL para PERL.
+
+%description -l fr
+Ce paquetage contient une mise en oeuvre de DBI pour PostgreSQL pour Perl.
+
+%description -l it
+Questo pacchetto contiene un'implementazione di DBI per
+PostgreSQL per Perl.
+
+%description -l ja
+¤³¤Î¥Ñ¥Ã¥±¡¼¥¸¤Ë¤Ï Perl ¤Î PostgreSQL ÍÑ DBI ¼ÂÁõ¤¬¼ıÏ¿¤µ¤ì¤Æ¤¤¤Ş¤¹¡£
+
+%description -l ko
+ÀÌ ÆĞÅ°Áö´Â ÆŞÀ» À§ÇÑ PostgreSQLÀÇ DBI ½ÇÇöÀ»
+Æ÷ÇÔÇÏ°í ÀÖ½À´Ï´Ù.
+
+%description -l no
+Denne pakken inneholder en implementasjon av DBI for PostgreSQL for
+Perl.
+
 %description -l pl
 DBD::Pg - Sterownik bazy danych PostgreSQL dla modu³u DBI.
+
+%description -l pt
+Este pacote contém uma implementação de DBI para o PostgreSQL para o
+Perl.
+
+%description -l ru
+üÔÏ ĞÁËÅÔ ÓÏÄÅÒÖÉÔ ÒÅÁÌÉÚÁÃÉÀ DBI ÄÌÑ PostgreSQL ÄÌÑ Perl.
+
+%description -l sv
+Detta paket innehåller en implementation av DBI för PostgreSQL för
+Perl.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
