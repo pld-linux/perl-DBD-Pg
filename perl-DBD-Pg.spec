@@ -2,8 +2,8 @@
 %define	pdir	DBD
 %define	pnam	Pg
 %define		_noautoreq "perl(POSIX(qw(isprint)))"
-Summary:	DBD-Pg perl module
-Summary(pl):	Modu³ perla DBD-Pg
+Summary:	DBD::Pg perl module
+Summary(pl):	Modu³ perla DBD::Pg
 Name:		perl-DBD-Pg
 Version:	1.01
 Release:	3
