@@ -23,12 +23,12 @@ Summary(sv):	Ett gränssnitt till PostgresSQL för Perl
 Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ PostgresSQL
 Summary(zh_CN):	Perl µÄ PostgresSQL ½çÃæ¡£
 Name:		perl-DBD-Pg
-Version:	1.22
-Release:	2
+Version:	1.31
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2fc355b28ad5c7c05a46bf74fc88dd38
+# Source0-md5:	325b0d88b86d5e0fd0eb97c0b3b8f303
 BuildRequires:	perl-DBI
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	postgresql-devel
