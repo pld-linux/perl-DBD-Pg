@@ -100,7 +100,7 @@ Perl.
 POSTGRES_LIB="%{_libdir}"; export POSTGRES_LIB
 POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %{!?_without_tests:%{__make} test}
