@@ -3,7 +3,7 @@
 Summary:	DBD-Pg perl module
 Summary(pl):	Modu³ perla DBD-Pg
 Name:		perl-DBD-Pg
-Version:	1.00
+Version:	1.01
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
