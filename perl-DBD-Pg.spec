@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	Pg
@@ -18,7 +22,7 @@ Summary(sv):	Ett gr‰nssnitt till PostgresSQL fˆr Perl
 Summary(uk):	Perl-¶Œ‘≈“∆≈ ” ƒœ PostgresSQL
 Summary(zh_CN):	Perl µƒ PostgresSQL ΩÁ√Ê°£
 Name:		perl-DBD-Pg
-Version:	1.21
+Version:	1.22
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -88,6 +92,8 @@ POSTGRES_LIB="%{_libdir}"; export POSTGRES_LIB
 POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
 %{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
