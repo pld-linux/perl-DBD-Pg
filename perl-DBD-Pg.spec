@@ -24,6 +24,7 @@ Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	404c7966eb2debf8b9653a3e94c6d62f
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-DBI
 BuildRequires:	postgresql-devel
