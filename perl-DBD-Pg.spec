@@ -1,9 +1,10 @@
+%define		_noautoreq "perl(POSIX(qw(isprint)))"
 %include	/usr/lib/rpm/macros.perl
 Summary:	DBD-Pg perl module
 Summary(pl):	Modu³ perla DBD-Pg
 Name:		perl-DBD-Pg
 Version:	0.98
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -26,7 +27,7 @@ DBD::Pg - Sterownik bazy danych PostgreSQL dla modu³u DBI.
 
 %build
 POSTGRES_LIB="/usr/lib"; export POSTGRES_LIB
-POSTGRES_INCLUDE="/usr/include/pgsql"; export POSTGRES_INCLUDE
+POSTGRES_INCLUDE="/usr/include/postgresql"; export POSTGRES_INCLUDE
 perl Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
