@@ -28,7 +28,7 @@ DBD::Pg - Sterownik bazy danych PostgreSQL dla modu³u DBI.
 POSTGRES_LIB="/usr/lib"; export POSTGRES_LIB
 POSTGRES_INCLUDE="/usr/include/pgsql"; export POSTGRES_INCLUDE
 perl Makefile.PL
-%{__make} OPTIMIZE="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g}"
+%{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
