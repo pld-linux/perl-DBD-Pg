@@ -19,14 +19,14 @@ Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ PostgresSQL
 Summary(zh_CN):	Perl µÄ PostgresSQL ½çÃæ¡£
 Name:		perl-DBD-Pg
 Version:	1.21
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-DBI
 BuildRequires:	postgresql-devel
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreq "perl(POSIX(qw(isprint)))"
@@ -86,7 +86,8 @@ Perl.
 %build
 POSTGRES_LIB="%{_libdir}"; export POSTGRES_LIB
 POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
@@ -100,8 +101,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitearch}/DBD/*
-%dir %{perl_sitearch}/auto/DBD/Pg
-%{perl_sitearch}/auto/DBD/Pg/Pg.bs
-%attr(755,root,root) %{perl_sitearch}/auto/DBD/Pg/Pg.so
+%{perl_vendorarch}/DBD/*
+%dir %{perl_vendorarch}/auto/DBD/Pg
+%{perl_vendorarch}/auto/DBD/Pg/Pg.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/DBD/Pg/Pg.so
 %{_mandir}/man[13]/*
