@@ -86,7 +86,7 @@ Perl.
 %build
 POSTGRES_LIB="%{_libdir}"; export POSTGRES_LIB
 POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
