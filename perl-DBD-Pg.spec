@@ -25,7 +25,8 @@ Summary(zh_CN):	Perl µÄ PostgresSQL ½çÃæ¡£
 Name:		perl-DBD-Pg
 Version:	1.32
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9d6a936e6f755af677ceef59272a50ac
