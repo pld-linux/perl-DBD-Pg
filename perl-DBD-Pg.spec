@@ -18,7 +18,7 @@ Summary(sv):	Ett gränssnitt till PostgresSQL för Perl
 Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ PostgresSQL
 Summary(zh_CN):	Perl µÄ PostgresSQL ½çÃæ¡£
 Name:		perl-DBD-Pg
-Version:	1.20
+Version:	1.21
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
