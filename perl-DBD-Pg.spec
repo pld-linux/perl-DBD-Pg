@@ -1,13 +1,12 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	Pg
 %define		_noautoreq "perl(POSIX(qw(isprint)))"
-%include	/usr/lib/rpm/macros.perl
 Summary:	DBD-Pg perl module
 Summary(pl):	Modu³ perla DBD-Pg
 Name:		perl-DBD-Pg
 Version:	1.01
-Release:	2
-
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -24,7 +23,7 @@ DBD::Pg - PostgreSQL database driver for the DBI module.
 DBD::Pg - Sterownik bazy danych PostgreSQL dla modu³u DBI.
 
 %prep
-%setup -q -n DBD-Pg-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 POSTGRES_LIB="%{_libdir}"; export POSTGRES_LIB
