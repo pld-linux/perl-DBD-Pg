@@ -3,8 +3,8 @@
 %bcond_without	tests	# Do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DBD
-%define	pnam	Pg
+%define		pdir	DBD
+%define		pnam	Pg
 Summary:	A PostgresSQL interface for Perl
 Summary(cs):	PostgresSQL rozhraní pro Perl
 Summary(da):	Et PostgreSQL-grænseflade for Perl
