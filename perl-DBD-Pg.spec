@@ -105,6 +105,8 @@ POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
 
+# skip SIGNATURE test (uses network to get PGP key)
+rm SIGNATURE
 %{?with_tests:%{__make} test}
 
 %install
