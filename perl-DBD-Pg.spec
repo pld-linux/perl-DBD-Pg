@@ -6,22 +6,22 @@
 %define		pdir	DBD
 %define		pnam	Pg
 Summary:	A PostgresSQL interface for Perl
-Summary(cs):	PostgresSQL rozhraní pro Perl
-Summary(da):	Et PostgreSQL-grænseflade for Perl
-Summary(de):	Ein PostgreSQL-Interface für Perl
-Summary(es):	Interfaz PostgresSQL para Perl
-Summary(fr):	Interface PostgresSQL pour Perl
-Summary(it):	Interfaccia PostgreSQL per Perl
-Summary(ja):	Perl ¤Î PostgreSQL ¥¤¥ó¥¿¡¼¥Õ¥§¥¤¥¹
-Summary(ko):	ÆŞÀ» À§ÇÑ PostgresSQL ÀÎÅÍÆäÀÌ½º
-Summary(nb):	Et PostgreSQL-grensesnitt for Perl
-Summary(pl):	Perlowy interfejs do PostgresSQL-a
-Summary(pt):	Uma interface de Perl para o PostgresSQL
-Summary(pt_BR):	Uma interface de Perl para o PostgresSQL
-Summary(ru):	éÎÔÅÒÆÅÊÓ PostgresSQL ÄÌÑ Perl
-Summary(sv):	Ett gränssnitt till PostgresSQL för Perl
-Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ PostgresSQL
-Summary(zh_CN):	Perl µÄ PostgresSQL ½çÃæ¡£
+Summary(cs.UTF-8):   PostgresSQL rozhranÃ­ pro Perl
+Summary(da.UTF-8):   Et PostgreSQL-grÃ¦nseflade for Perl
+Summary(de.UTF-8):   Ein PostgreSQL-Interface fÃ¼r Perl
+Summary(es.UTF-8):   Interfaz PostgresSQL para Perl
+Summary(fr.UTF-8):   Interface PostgresSQL pour Perl
+Summary(it.UTF-8):   Interfaccia PostgreSQL per Perl
+Summary(ja.UTF-8):   Perl ã® PostgreSQL ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹
+Summary(ko.UTF-8):   í„ì„ ìœ„í•œ PostgresSQL ì¸í„°í˜ì´ìŠ¤
+Summary(nb.UTF-8):   Et PostgreSQL-grensesnitt for Perl
+Summary(pl.UTF-8):   Perlowy interfejs do PostgresSQL-a
+Summary(pt.UTF-8):   Uma interface de Perl para o PostgresSQL
+Summary(pt_BR.UTF-8):   Uma interface de Perl para o PostgresSQL
+Summary(ru.UTF-8):   Ğ˜Ğ½Ñ‚ĞµÑ€Ñ„ĞµĞ¹Ñ PostgresSQL Ğ´Ğ»Ñ Perl
+Summary(sv.UTF-8):   Ett grÃ¤nssnitt till PostgresSQL fÃ¶r Perl
+Summary(uk.UTF-8):   Perl-Ñ–Ğ½Ñ‚ĞµÑ€Ñ„ĞµĞ¹Ñ Ğ´Ğ¾ PostgresSQL
+Summary(zh_CN.UTF-8):   Perl çš„ PostgresSQL ç•Œé¢ã€‚
 Name:		perl-DBD-Pg
 Version:	1.49
 Release:	1
@@ -41,58 +41,58 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DBD::Pg - PostgreSQL database driver for the DBI module.
 
-%description -l cs
+%description -l cs.UTF-8
 Implementace DBI pro PostgreSQL do Perlu.
 
-%description -l da
+%description -l da.UTF-8
 Denne pakke indeholder en implementation af DBI for PostgreSQL for
 Perl.
 
-%description -l de
-Dieses Paket enthält eine Implementierung von PostgreSQL für Perl.
+%description -l de.UTF-8
+Dieses Paket enthÃ¤lt eine Implementierung von PostgreSQL fÃ¼r Perl.
 
-%description -l es
-Este paquete contiene una implementación de DBI para PotgreSQL para
+%description -l es.UTF-8
+Este paquete contiene una implementaciÃ³n de DBI para PotgreSQL para
 PERL.
 
-%description -l fr
+%description -l fr.UTF-8
 Ce paquetage contient une mise en oeuvre de DBI pour PostgreSQL pour
 Perl.
 
-%description -l it
+%description -l it.UTF-8
 Questo pacchetto contiene un'implementazione di DBI per PostgreSQL per
 Perl.
 
-%description -l ja
-¤³¤Î¥Ñ¥Ã¥±¡¼¥¸¤Ë¤Ï Perl ¤Î PostgreSQL ÍÑ DBI ¼ÂÁõ¤¬¼ıÏ¿¤µ¤ì¤Æ¤¤¤Ş¤¹¡£
+%description -l ja.UTF-8
+ã“ã®ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã«ã¯ Perl ã® PostgreSQL ç”¨ DBI å®Ÿè£…ãŒåéŒ²ã•ã‚Œã¦ã„ã¾ã™ã€‚
 
-%description -l ko
-ÀÌ ÆĞÅ°Áö´Â ÆŞÀ» À§ÇÑ PostgreSQLÀÇ DBI ½ÇÇöÀ» Æ÷ÇÔÇÏ°í ÀÖ½À´Ï´Ù.
+%description -l ko.UTF-8
+ì´ íŒ¨í‚¤ì§€ëŠ” í„ì„ ìœ„í•œ PostgreSQLì˜ DBI ì‹¤í˜„ì„ í¬í•¨í•˜ê³  ìˆìŠµë‹ˆë‹¤.
 
-%description -l nb
+%description -l nb.UTF-8
 Denne pakken inneholder en implementasjon av DBI for PostgreSQL for
 Perl.
 
-%description -l pl
-DBD::Pg - Sterownik bazy danych PostgreSQL dla modu³u DBI.
+%description -l pl.UTF-8
+DBD::Pg - Sterownik bazy danych PostgreSQL dla moduÅ‚u DBI.
 
-%description -l pt
-Este pacote contém uma implementação de DBI para o PostgreSQL para o
+%description -l pt.UTF-8
+Este pacote contÃ©m uma implementaÃ§Ã£o de DBI para o PostgreSQL para o
 Perl.
 
-%description -l pt_BR
-Este pacote contém uma implementação de DBI para o PostgreSQL para o
+%description -l pt_BR.UTF-8
+Este pacote contÃ©m uma implementaÃ§Ã£o de DBI para o PostgreSQL para o
 Perl.
 
-%description -l ru
-üÔÏ ĞÁËÅÔ ÓÏÄÅÒÖÉÔ ÒÅÁÌÉÚÁÃÉÀ DBI ÄÌÑ PostgreSQL ÄÌÑ Perl.
+%description -l ru.UTF-8
+Ğ­Ñ‚Ğ¾ Ğ¿Ğ°ĞºĞµÑ‚ ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ Ñ€ĞµĞ°Ğ»Ğ¸Ğ·Ğ°Ñ†Ğ¸Ñ DBI Ğ´Ğ»Ñ PostgreSQL Ğ´Ğ»Ñ Perl.
 
-%description -l sv
-Detta paket innehåller en implementation av DBI för PostgreSQL för
+%description -l sv.UTF-8
+Detta paket innehÃ¥ller en implementation av DBI fÃ¶r PostgreSQL fÃ¶r
 Perl.
 
-%description -l zh_CN
-¸ÃÈí¼ş°ü°üÀ¨ÓÃÓÚ Perl µÄ PostgreSQL µÄ DBI ÊµÏÖ¡£
+%description -l zh_CN.UTF-8
+è¯¥è½¯ä»¶åŒ…åŒ…æ‹¬ç”¨äº Perl çš„ PostgreSQL çš„ DBI å®ç°ã€‚
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
