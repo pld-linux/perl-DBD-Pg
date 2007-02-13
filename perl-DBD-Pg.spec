@@ -6,22 +6,22 @@
 %define		pdir	DBD
 %define		pnam	Pg
 Summary:	A PostgresSQL interface for Perl
-Summary(cs.UTF-8):   PostgresSQL rozhraní pro Perl
-Summary(da.UTF-8):   Et PostgreSQL-grænseflade for Perl
-Summary(de.UTF-8):   Ein PostgreSQL-Interface für Perl
-Summary(es.UTF-8):   Interfaz PostgresSQL para Perl
-Summary(fr.UTF-8):   Interface PostgresSQL pour Perl
-Summary(it.UTF-8):   Interfaccia PostgreSQL per Perl
-Summary(ja.UTF-8):   Perl の PostgreSQL インターフェイス
-Summary(ko.UTF-8):   펄을 위한 PostgresSQL 인터페이스
-Summary(nb.UTF-8):   Et PostgreSQL-grensesnitt for Perl
-Summary(pl.UTF-8):   Perlowy interfejs do PostgresSQL-a
-Summary(pt.UTF-8):   Uma interface de Perl para o PostgresSQL
-Summary(pt_BR.UTF-8):   Uma interface de Perl para o PostgresSQL
-Summary(ru.UTF-8):   Интерфейс PostgresSQL для Perl
-Summary(sv.UTF-8):   Ett gränssnitt till PostgresSQL för Perl
-Summary(uk.UTF-8):   Perl-інтерфейс до PostgresSQL
-Summary(zh_CN.UTF-8):   Perl 的 PostgresSQL 界面。
+Summary(cs.UTF-8):	PostgresSQL rozhraní pro Perl
+Summary(da.UTF-8):	Et PostgreSQL-grænseflade for Perl
+Summary(de.UTF-8):	Ein PostgreSQL-Interface für Perl
+Summary(es.UTF-8):	Interfaz PostgresSQL para Perl
+Summary(fr.UTF-8):	Interface PostgresSQL pour Perl
+Summary(it.UTF-8):	Interfaccia PostgreSQL per Perl
+Summary(ja.UTF-8):	Perl の PostgreSQL インターフェイス
+Summary(ko.UTF-8):	펄을 위한 PostgresSQL 인터페이스
+Summary(nb.UTF-8):	Et PostgreSQL-grensesnitt for Perl
+Summary(pl.UTF-8):	Perlowy interfejs do PostgresSQL-a
+Summary(pt.UTF-8):	Uma interface de Perl para o PostgresSQL
+Summary(pt_BR.UTF-8):	Uma interface de Perl para o PostgresSQL
+Summary(ru.UTF-8):	Интерфейс PostgresSQL для Perl
+Summary(sv.UTF-8):	Ett gränssnitt till PostgresSQL för Perl
+Summary(uk.UTF-8):	Perl-інтерфейс до PostgresSQL
+Summary(zh_CN.UTF-8):	Perl 的 PostgresSQL 界面。
 Name:		perl-DBD-Pg
 Version:	1.49
 Release:	1
