@@ -28,8 +28,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	71757069e05662985f2931e84edc3e6c
+URL:		http://search.cpan.org/dist/DBD-Pg/
 BuildRequires:	perl-DBI
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	postgresql-devel
