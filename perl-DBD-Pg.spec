@@ -1,6 +1,7 @@
 #
 # Conditional build:
 %bcond_without	tests	# Do not perform "make test"
+%bcond_with	dbtests	# perform tests using local PostgreSQL installation
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
@@ -109,7 +110,7 @@ POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
 
 # skip SIGNATURE test (uses network to get PGP key)
 rm SIGNATURE
-%{?with_tests:%{__make} test}
+%{?with_tests:%{__make} test %{!?with_dbtests:DBI_DSN=NOWAY}}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -123,8 +124,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorarch}/DBD/*
+%{perl_vendorarch}/DBD/Pg.pm
 %dir %{perl_vendorarch}/auto/DBD/Pg
 %{perl_vendorarch}/auto/DBD/Pg/Pg.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/Pg/Pg.so
-%{_mandir}/man[13]/*
+%{_mandir}/man3/DBD::Pg.3pm*
