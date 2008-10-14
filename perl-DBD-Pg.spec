@@ -34,6 +34,7 @@ Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.ta
 URL:		http://search.cpan.org/dist/DBD-Pg/
 BuildRequires:	perl-DBI
 BuildRequires:	perl-devel >= 1:5.8.0
+%{?with_tests:BuildRequires:	perl-version}
 BuildRequires:	postgresql-devel
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(DBD::Pg) = %{version}
