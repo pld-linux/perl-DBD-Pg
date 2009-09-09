@@ -24,13 +24,13 @@ Summary(sv.UTF-8):	Ett gränssnitt till PostgresSQL för Perl
 Summary(uk.UTF-8):	Perl-інтерфейс до PostgresSQL
 Summary(zh_CN.UTF-8):	Perl 的 PostgresSQL 界面。
 Name:		perl-DBD-Pg
-Version:	2.13.1
+Version:	2.15.1
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	4e16c70109146d18a11a5170d30b305a
+# Source0-md5:	b1c5488a68fa61cc3694b0cd4e413e25
 URL:		http://search.cpan.org/dist/DBD-Pg/
 BuildRequires:	perl-DBI
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -127,7 +127,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorarch}/DBD/Pg.pm
+%{perl_vendorarch}/Bundle/DBD/Pg.pm
 %dir %{perl_vendorarch}/auto/DBD/Pg
 %{perl_vendorarch}/auto/DBD/Pg/Pg.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/Pg/Pg.so
-%{_mandir}/man3/DBD::Pg.3pm*
+%{_mandir}/man3/*
