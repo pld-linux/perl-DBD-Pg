@@ -25,7 +25,7 @@ Summary(uk.UTF-8):	Perl-інтерфейс до PostgresSQL
 Summary(zh_CN.UTF-8):	Perl 的 PostgresSQL 界面。
 Name:		perl-DBD-Pg
 Version:	2.15.1
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -127,6 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorarch}/DBD/Pg.pm
+%dir %{perl_vendorarch}/Bundle/DBD
 %{perl_vendorarch}/Bundle/DBD/Pg.pm
 %dir %{perl_vendorarch}/auto/DBD/Pg
 %{perl_vendorarch}/auto/DBD/Pg/Pg.bs
