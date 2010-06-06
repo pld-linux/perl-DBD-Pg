@@ -29,7 +29,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/T/TU/TURNSTEP/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	96b24b29d876bbbcc7c194115917a2f0
 URL:		http://search.cpan.org/dist/DBD-Pg/
 BuildRequires:	perl-DBI
