@@ -128,6 +128,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/DBD/Pg.pm
 %dir %{perl_vendorarch}/auto/DBD/Pg
-%{perl_vendorarch}/auto/DBD/Pg/Pg.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/Pg/Pg.so
 %{_mandir}/man3/*
