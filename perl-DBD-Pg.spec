@@ -24,19 +24,20 @@ Summary(sv.UTF-8):	Ett gränssnitt till PostgresSQL för Perl
 Summary(uk.UTF-8):	Perl-інтерфейс до PostgresSQL
 Summary(zh_CN.UTF-8):	Perl 的 PostgresSQL 界面。
 Name:		perl-DBD-Pg
-Version:	2.19.3
-Release:	3
+Version:	3.4.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/T/TU/TURNSTEP/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	026ea19f89aee12051bce23d797e824b
+# Source0-md5:	c446947d25ba53a943a8532d2bc14996
 URL:		http://search.cpan.org/dist/DBD-Pg/
-BuildRequires:	perl-DBI
+BuildRequires:	perl-DBI >= 1.614
 BuildRequires:	perl-devel >= 1:5.8.0
 %{?with_tests:BuildRequires:	perl-version}
 BuildRequires:	postgresql-devel
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-DBI >= 1.614
 Provides:	perl(DBD::Pg) = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -127,6 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorarch}/DBD/Pg.pm
+%{perl_vendorarch}/Bundle/DBD/Pg.pm
 %dir %{perl_vendorarch}/auto/DBD/Pg
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/Pg/Pg.so
 %{_mandir}/man3/*
