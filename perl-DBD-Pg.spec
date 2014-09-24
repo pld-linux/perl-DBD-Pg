@@ -25,7 +25,7 @@ Summary(uk.UTF-8):	Perl-інтерфейс до PostgresSQL
 Summary(zh_CN.UTF-8):	Perl 的 PostgresSQL 界面。
 Name:		perl-DBD-Pg
 Version:	3.4.1
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -33,7 +33,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/T/TU/TURNSTEP/%{pdir}-%{pnam}-%{
 # Source0-md5:	c446947d25ba53a943a8532d2bc14996
 URL:		http://search.cpan.org/dist/DBD-Pg/
 BuildRequires:	perl-DBI >= 1.614
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.1
 %{?with_tests:BuildRequires:	perl-version}
 BuildRequires:	postgresql-devel
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -121,6 +121,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# remove "tool" to install Perl modules
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/Bundle/DBD/Pg.pm \
+	$RPM_BUILD_ROOT%{_mandir}/man3/Bundle::DBD::Pg.3pm
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -128,7 +132,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorarch}/DBD/Pg.pm
-%{perl_vendorarch}/Bundle/DBD/Pg.pm
 %dir %{perl_vendorarch}/auto/DBD/Pg
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/Pg/Pg.so
-%{_mandir}/man3/*
+%{_mandir}/man3/DBD::Pg.3pm*
