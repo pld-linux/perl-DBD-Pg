@@ -3,7 +3,6 @@
 %bcond_without	tests	# Do not perform "make test"
 %bcond_with	dbtests	# perform tests using local PostgreSQL installation
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
 %define		pnam	Pg
 Summary:	A PostgresSQL interface for Perl
