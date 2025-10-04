@@ -1,7 +1,7 @@
 #
 # Conditional build:
-%bcond_without	tests	# Do not perform "make test"
-%bcond_with	dbtests	# perform tests using local PostgreSQL installation
+%bcond_without	tests	# unit tests
+%bcond_with	dbtests	# tests using local PostgreSQL installation
 #
 %define		pdir	DBD
 %define		pnam	Pg
@@ -28,21 +28,23 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	f58e5f6cbcc94e599afa08224f4e1dd2
-URL:		http://search.cpan.org/dist/DBD-Pg/
+URL:		https://metacpan.org/dist/DBD-Pg
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.11
 BuildRequires:	perl-DBI >= 1.614
-%{?with_tests:BuildRequires:	perl-Test-Simple >= 0.88}
 BuildRequires:	perl-devel >= 1:5.8.1
-%{?with_tests:BuildRequires:	perl-version}
+%if %{with tests}
+BuildRequires:	perl-Test-Simple >= 0.88
+BuildRequires:	perl-version
+%endif
 BuildRequires:	postgresql-devel
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-DBI >= 1.614
+# version not detected
 Provides:	perl(DBD::Pg) = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_noautoreq 'perl(POSIX(qw(isprint)))'
 
 %description
 DBD::Pg - PostgreSQL database driver for the DBI module.
@@ -108,12 +110,13 @@ POSTGRES_LIB="%{_libdir}"; export POSTGRES_LIB
 POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
+
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags} -std=gnu17"
 
 # skip SIGNATURE test (uses network to get PGP key)
-rm SIGNATURE
+%{__rm} SIGNATURE
 %{?with_tests:%{__make} test %{!?with_dbtests:DBI_DSN=NOWAY}}
 
 %install
