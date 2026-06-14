@@ -114,7 +114,7 @@ export POSTGRES_INCLUDE="%{_includedir}/postgresql"
 
 %{__make} \
 	CC="%{__cc}" \
-	OPTIMIZE="%{rpmcflags} -std=gnu17"
+	OPTIMIZE="%{rpmcflags}"
 
 # skip SIGNATURE test (uses network to get PGP key)
 %{__rm} SIGNATURE
