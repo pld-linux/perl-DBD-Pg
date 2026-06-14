@@ -28,19 +28,20 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/DBD/TURNSTEP/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	47df9e208d26be363332bcdde538a859
 URL:		https://metacpan.org/dist/DBD-Pg
-BuildRequires:	perl-ExtUtils-MakeMaker >= 6.11
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.58
 BuildRequires:	perl-DBI >= 1.614
 BuildRequires:	perl-devel >= 1:5.8.1
 %if %{with tests}
 BuildRequires:	perl-Test-Simple >= 0.88
+BuildRequires:	perl-Time-HiRes
 BuildRequires:	perl-version
 %endif
-BuildRequires:	postgresql-devel
+BuildRequires:	postgresql-devel >= 8
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	rpmbuild(macros) >= 1.745
+BuildRequires:	rpmbuild(macros) >= 1.749
 Requires:	perl-DBI >= 1.614
 # version not detected
 Provides:	perl(DBD::Pg) = %{version}
@@ -106,8 +107,8 @@ Perl.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-POSTGRES_LIB="%{_libdir}"; export POSTGRES_LIB
-POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
+export POSTGRES_LIB="%{_libdir}"
+export POSTGRES_INCLUDE="%{_includedir}/postgresql"
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 
@@ -117,7 +118,10 @@ POSTGRES_INCLUDE="%{_includedir}/postgresql"; export POSTGRES_INCLUDE
 
 # skip SIGNATURE test (uses network to get PGP key)
 %{__rm} SIGNATURE
-%{?with_tests:%{__make} test %{!?with_dbtests:DBI_DSN=NOWAY}}
+%if %{with tests}
+%{__make} test \
+	%{!?with_dbtests:DBI_DSN=NOWAY}
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -137,5 +141,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorarch}/DBD/Pg.pm
 %dir %{perl_vendorarch}/auto/DBD/Pg
-%attr(755,root,root) %{perl_vendorarch}/auto/DBD/Pg/Pg.so
+%{perl_vendorarch}/auto/DBD/Pg/Pg.so
 %{_mandir}/man3/DBD::Pg.3pm*
