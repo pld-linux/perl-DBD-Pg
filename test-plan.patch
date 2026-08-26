@@ -1,0 +1,61 @@
+Upstream 3.21.1 moved "plan tests" above the connect check in these three files,
+so the "plan skip_all" taken when no test database exists dies with
+"You tried to plan twice". Order them the way 01connect.t/02attribs.t already do.
+
+--- DBD-Pg-3.21.1/t/03dbmethod.t.orig
++++ DBD-Pg-3.21.1/t/03dbmethod.t
+@@ -17,7 +17,6 @@
+ use warnings;
+ use lib 'blib/lib', 'blib/arch', 't';
+ use Test::More;
+-plan tests => 702;
+ use Config;
+ use DBI     ':sql_types';
+ use DBD::Pg ':pg_types';
+@@ -32,6 +31,8 @@
+     plan skip_all => 'Connection to database failed, cannot continue testing';
+ }
+ 
++plan tests => 702;
++
+ my $superuser = is_super();
+ 
+ isnt ($dbh, undef, 'Connect to database for database handle method testing');
+--- DBD-Pg-3.21.1/t/10_pg_error_field.t.orig
++++ DBD-Pg-3.21.1/t/10_pg_error_field.t
+@@ -7,7 +7,6 @@
+ use warnings;
+ use lib 'blib/lib', 'blib/arch', 't';
+ use Test::More;
+-plan tests => 5;
+ require 'dbdpg_test_setup.pl';
+ select(($|=1,select(STDERR),$|=1)[1]);
+ 
+@@ -17,6 +16,8 @@
+     plan skip_all => 'Connection to database failed, cannot continue testing';
+ }
+ 
++plan tests => 5;
++
+ my $t='Connect to database for pg_error_field testing';
+ isnt ($dbh, undef, $t);
+ 
+--- DBD-Pg-3.21.1/t/30unicode.t.orig
++++ DBD-Pg-3.21.1/t/30unicode.t
+@@ -13,7 +13,6 @@
+ use Encode qw(encode_utf8);
+ use Data::Dumper;
+ use Test::More;
+-plan tests => 2;
+ use open qw/ :std :encoding(utf8) /;
+ require 'dbdpg_test_setup.pl';
+ select(($|=1,select(STDERR),$|=1)[1]);
+@@ -24,6 +23,8 @@
+     plan skip_all => 'Connection to database failed, cannot continue testing';
+ }
+ 
++plan tests => 2;
++
+ isnt ($dbh, undef, 'Connect to database for unicode testing');
+ 
+ 
